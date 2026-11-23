@@ -31,3 +31,5 @@ test_screenshots
 scripts/verify-invitation.js
 scripts/test-firebase.js
 scripts/test-countdown-lock.js
+
+.vercel

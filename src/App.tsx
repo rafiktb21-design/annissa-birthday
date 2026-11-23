@@ -14,6 +14,7 @@ import FinalMessage from './components/FinalMessage'
 import MusicPlayer from './components/MusicPlayer'
 import MobileNavigation from './components/MobileNavigation'
 import FloatingDecorations from './components/FloatingDecorations'
+import { audio } from './utils/audio'
 
 export default function App() {
   const [isUnlocked, setIsUnlocked] = useState<boolean>(() => {
@@ -32,6 +33,38 @@ export default function App() {
 
   const [isInvitationOpened, setIsInvitationOpened] = useState(false)
   const lenisRef = useRef<Lenis | null>(null)
+
+  // Autoplay music immediately on every visit (today, tomorrow, or after refresh)
+  useEffect(() => {
+    // Reset mute state so every revisit starts with music playing
+    audio.setMuted(false)
+    audio.startBGM()
+
+    // Eager fallback: browser autoplay policy requires user interaction on some mobile devices
+    const resumeOnInteraction = () => {
+      audio.setMuted(false)
+      audio.startBGM()
+      window.removeEventListener('pointerdown', resumeOnInteraction)
+      window.removeEventListener('touchstart', resumeOnInteraction)
+      window.removeEventListener('click', resumeOnInteraction)
+      window.removeEventListener('scroll', resumeOnInteraction)
+      window.removeEventListener('keydown', resumeOnInteraction)
+    }
+
+    window.addEventListener('pointerdown', resumeOnInteraction, { once: true, passive: true })
+    window.addEventListener('touchstart', resumeOnInteraction, { once: true, passive: true })
+    window.addEventListener('click', resumeOnInteraction, { once: true, passive: true })
+    window.addEventListener('scroll', resumeOnInteraction, { once: true, passive: true })
+    window.addEventListener('keydown', resumeOnInteraction, { once: true, passive: true })
+
+    return () => {
+      window.removeEventListener('pointerdown', resumeOnInteraction)
+      window.removeEventListener('touchstart', resumeOnInteraction)
+      window.removeEventListener('click', resumeOnInteraction)
+      window.removeEventListener('scroll', resumeOnInteraction)
+      window.removeEventListener('keydown', resumeOnInteraction)
+    }
+  }, [])
 
   const handleUnlockCountdown = () => {
     setIsUnlocked(true)

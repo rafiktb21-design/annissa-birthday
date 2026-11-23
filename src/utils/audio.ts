@@ -48,6 +48,16 @@ class AudioManager {
     }
   }
 
+  public setMuted(muted: boolean) {
+    this.isMuted = muted
+    if (this.masterGain && this.ctx) {
+      this.masterGain.gain.setValueAtTime(this.isMuted ? 0 : this.volume, this.ctx.currentTime)
+    }
+    if (this.audioEl) {
+      this.audioEl.muted = this.isMuted
+    }
+  }
+
   public toggleMute(): boolean {
     this.isMuted = !this.isMuted
     if (this.masterGain && this.ctx) {
@@ -323,6 +333,8 @@ class AudioManager {
   }
 
   public startBGM() {
+    this.isMuted = false
+    this.initContext()
     if (this.isPlayingBgm) return
     this.isPlayingBgm = true
 
@@ -330,11 +342,9 @@ class AudioManager {
     if (this.audioEl && this.audioEl.src) {
       this.audioEl.play().catch(() => {
         // Fall back gracefully to synthesized piano arrangement
-        this.initContext()
         this.playHappyBirthdaySong()
       })
     } else {
-      this.initContext()
       this.playHappyBirthdaySong()
     }
   }
