@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 32" width="100%" height="100%">
+  <defs>
+    <linearGradient id="tapePink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F7DCE5" stop-opacity="0.85" />
+      <stop offset="50%" stop-color="#FFF0F5" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#F4C7D5" stop-opacity="0.85" />
+    </linearGradient>
+  </defs>
+  <!-- Jagged tape edges -->
+  <path d="M 0 5 L 4 0 L 8 4 L 12 1 L 16 5 L 90 2 L 94 6 L 98 1 L 100 4 L 100 27 L 96 31 L 92 27 L 88 30 L 12 28 L 8 32 L 4 27 L 0 30 Z" 
+        fill="url(#tapePink)" />
+  <!-- Delicate floral or dashed motif on tape -->
+  <line x1="8" y1="16" x2="92" y2="16" stroke="#D8B77E" stroke-dasharray="2 4" stroke-width="1" opacity="0.6" />
+</svg>

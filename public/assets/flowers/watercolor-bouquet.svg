@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" width="100%" height="100%">
+  <defs>
+    <!-- Rose gradient -->
+    <radialGradient id="roseG" cx="45%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#FFF2F6" />
+      <stop offset="50%" stop-color="#F7DCE5" />
+      <stop offset="85%" stop-color="#EFAEBF" />
+      <stop offset="100%" stop-color="#C98299" />
+    </radialGradient>
+    <!-- Peach gradient -->
+    <radialGradient id="peachG" cx="45%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#FFF8F5" />
+      <stop offset="60%" stop-color="#F6C6B3" />
+      <stop offset="100%" stop-color="#E5A692" />
+    </radialGradient>
+    <!-- Olive Leaf gradient -->
+    <radialGradient id="leafG" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#C3D2B8" />
+      <stop offset="80%" stop-color="#889C77" />
+      <stop offset="100%" stop-color="#6F835E" />
+    </radialGradient>
+    <filter id="softShdw" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#674A49" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#softShdw)">
+    <!-- Background foliage & eucalyptus branches -->
+    <g opacity="0.85">
+      <!-- Left eucalyptus branch -->
+      <path d="M 120 120 Q 70 80 30 60" fill="none" stroke="#889C77" stroke-width="1.8" stroke-linecap="round"/>
+      <ellipse cx="40" cy="62" rx="14" ry="9" transform="rotate(-25 40 62)" fill="url(#leafG)"/>
+      <ellipse cx="68" cy="78" rx="16" ry="10" transform="rotate(-15 68 78)" fill="url(#leafG)"/>
+      <ellipse cx="95" cy="98" rx="15" ry="9" transform="rotate(-30 95 98)" fill="url(#leafG)"/>
+      
+      <!-- Right eucalyptus branch -->
+      <path d="M 120 120 Q 170 80 210 60" fill="none" stroke="#889C77" stroke-width="1.8" stroke-linecap="round"/>
+      <ellipse cx="200" cy="62" rx="14" ry="9" transform="rotate(25 200 62)" fill="url(#leafG)"/>
+      <ellipse cx="172" cy="78" rx="16" ry="10" transform="rotate(15 172 78)" fill="url(#leafG)"/>
+      <ellipse cx="145" cy="98" rx="15" ry="9" transform="rotate(30 145 98)" fill="url(#leafG)"/>
+
+      <!-- Golden sprigs with little berries -->
+      <path d="M 120 110 Q 50 120 20 130" fill="none" stroke="#D8B77E" stroke-width="1.2" stroke-linecap="round"/>
+      <circle cx="25" cy="128" r="3.5" fill="#D8B77E"/>
+      <circle cx="45" cy="122" r="3" fill="#D8B77E"/>
+      <circle cx="65" cy="116" r="3.5" fill="#D8B77E"/>
+
+      <path d="M 120 110 Q 190 120 220 130" fill="none" stroke="#D8B77E" stroke-width="1.2" stroke-linecap="round"/>
+      <circle cx="215" cy="128" r="3.5" fill="#D8B77E"/>
+      <circle cx="195" cy="122" r="3" fill="#D8B77E"/>
+      <circle cx="175" cy="116" r="3.5" fill="#D8B77E"/>
+    </g>
+
+    <!-- Center Big Blush Rose -->
+    <g transform="translate(120, 105)">
+      <!-- Outer layered petals -->
+      <path d="M -28 -10 C -40 -25 -20 -42 0 -38 C 20 -42 40 -25 28 -10 C 38 12 18 35 0 35 C -18 35 -38 12 -28 -10 Z" fill="url(#roseG)"/>
+      <!-- Inner swirls -->
+      <circle cx="0" cy="0" r="22" fill="url(#roseG)"/>
+      <path d="M -12 -8 Q 0 -18 12 -8 Q 16 8 0 14 Q -16 8 -12 -8 Z" fill="#FFF0F5" opacity="0.8"/>
+      <path d="M -6 -4 Q 0 -10 6 -4 Q 8 4 0 7 Q -8 4 -6 -4 Z" fill="#C98299" opacity="0.6"/>
+      <circle cx="0" cy="0" r="4" fill="#D8B77E"/>
+    </g>
+
+    <!-- Left Peach Blossom -->
+    <g transform="translate(75, 115) scale(0.8)">
+      <circle cx="-12" cy="-8" r="14" fill="url(#peachG)"/>
+      <circle cx="12" cy="-8" r="14" fill="url(#peachG)"/>
+      <circle cx="14" cy="10" r="14" fill="url(#peachG)"/>
+      <circle cx="-14" cy="10" r="14" fill="url(#peachG)"/>
+      <circle cx="0" cy="0" r="10" fill="#FFF8F5"/>
+      <circle cx="0" cy="0" r="4" fill="#D8B77E"/>
+    </g>
+
+    <!-- Right Soft Pink Ranunculus -->
+    <g transform="translate(165, 115) scale(0.8)">
+      <circle cx="-12" cy="-8" r="14" fill="url(#roseG)"/>
+      <circle cx="12" cy="-8" r="14" fill="url(#roseG)"/>
+      <circle cx="14" cy="10" r="14" fill="url(#roseG)"/>
+      <circle cx="-14" cy="10" r="14" fill="url(#roseG)"/>
+      <circle cx="0" cy="0" r="10" fill="#FFF2F6"/>
+      <circle cx="0" cy="0" r="4" fill="#D8B77E"/>
+    </g>
+
+    <!-- Cute Satin Ribbon knot at bottom center -->
+    <g transform="translate(120, 140) scale(0.65)">
+      <circle cx="0" cy="0" r="7" fill="#C98299" stroke="#D8B77E" stroke-width="1"/>
+      <path d="M -6 4 C -20 22 -35 28 -30 35 C -22 35 -10 20 -2 6 Z" fill="#EFAEBF" stroke="#D8B77E" stroke-width="0.8"/>
+      <path d="M 6 4 C 20 22 35 28 30 35 C 22 35 10 20 2 6 Z" fill="#EFAEBF" stroke="#D8B77E" stroke-width="0.8"/>
+    </g>
+  </g>
+</svg>

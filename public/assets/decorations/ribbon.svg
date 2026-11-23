@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ribbonGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EFAEBF"/>
+      <stop offset="50%" stop-color="#FFF0F5"/>
+      <stop offset="100%" stop-color="#EFAEBF"/>
+    </linearGradient>
+  </defs>
+  <!-- Ribbon banner -->
+  <path d="M 15 8 L 30 20 L 15 32 L 145 32 L 130 20 L 145 8 Z" fill="url(#ribbonGrad)" stroke="#D8B77E" stroke-width="1.2" />
+  <!-- Fold crease -->
+  <line x1="30" y1="8" x2="30" y2="32" stroke="#C98299" stroke-width="1" opacity="0.4" />
+  <line x1="130" y1="8" x2="130" y2="32" stroke="#C98299" stroke-width="1" opacity="0.4" />
+</svg>
